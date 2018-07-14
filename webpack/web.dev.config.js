@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         test: /\.json$/,
-        loader: 'json-loader',
+        //loader: 'json-loader',
       },
       {
         test: /\.js$/,
@@ -72,4 +72,9 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ],
+  node: {
+  fs: 'empty',
+  net: 'empty',
+  tls: 'empty'
+  }
 };

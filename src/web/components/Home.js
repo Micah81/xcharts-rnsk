@@ -1,14 +1,20 @@
 import React from 'react';
 import { Row, Col, Jumbotron } from 'reactstrap';
+import Chart from './Chart';
 
 const About = () => (
   <div>
     <Row>
       <Jumbotron className="bg-primary text-white">
-        <h1>Web & Mobile App Starter Kit</h1>
-        <p className="lead">For when you're looking to build 'the next big thing', but don't want to start from scratch.</p>
-        <p>This App Starter Kit is built for those who need both a web app + mobile app, and don't want to write and maintain two different code bases. The project shares the 'business logic' and allows flexibility in View components to ensure your project looks and feels native in each platform.</p>
+        <h1>Welcome to xCharts!</h1>
+        <p className="lead">Unbiased Stock Sentiment</p>
+        <p>xCharts is a unique chart voting platform that removes bias from financial trading decisions.</p>
       </Jumbotron>
+    </Row>
+    <Row>
+      <Col xs="12">
+          <Chart/>
+      </Col>
     </Row>
     <Row className="pt-5">
       <Col xs="12" md="4" className="pt-3 pt-md-0">
@@ -71,11 +77,11 @@ const About = () => (
     <hr />
     <Row className="pt-5">
       <Col xs="5" sm="3" lg="2" className="offset-lg-2">
-        <img className="img-fluid rounded-circle" src="https://avatars0.githubusercontent.com/u/1809236?s=460&v=4" />
+        <img className="img-fluid rounded-circle" src="https://avatars1.githubusercontent.com/u/22161818?s=460&v=4" />
       </Col>
       <Col xs="12" sm="9" lg="5" className="pt-4 pt-sm-0">
-        <h3>I can help</h3>
-        <p>This repo is a great place to start, but if you'd prefer to sit back and have your new project built for you, <a target="_blank" rel="noopener noreferrer" href="https://mcnam.ee">get in touch with me directly</a> and I'll provide a quote.</p>
+        <h3>An Alien?</h3>
+        <p>Something here?</p>
       </Col>
     </Row>
   </div>
