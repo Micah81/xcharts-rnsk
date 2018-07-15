@@ -5,19 +5,9 @@ import Chart from './Chart';
 const About = () => (
   <div>
     <Row>
-
-
-
       <Col xs="9">
-          <Chart/>
+        <Chart/>
       </Col>
-      <Col xs="3">
-        <p>Voting Buttons</p>
-
-      </Col>
-
-
-
     </Row>
   </div>
 );

@@ -7,6 +7,7 @@ import { VictoryCandlestick } from 'victory';
 var api = require('../../utils/api');
 var vars = require('../../utils/robinhood/credentials')
 import Loading from './Loading';
+import VotingButtons from './voting.buttons'
 
 function TopStock(credentials) {
   var promise;
@@ -93,6 +94,11 @@ class Chart extends React.Component {
         {!this.state.chartData
           ? <Loading/>
           : <ChartRender chartData={this.state.chartData } />}
+          <Row>
+            <Col xs="3">
+              <VotingButtons instrument={this.state.selectedInstrument} />
+            </Col>
+          </Row>
       </div>
     )
   }

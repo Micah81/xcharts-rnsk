@@ -159,7 +159,7 @@ export function resetPassword(formData) {
   * Update Profile
   */
 export function updateProfile(formData) {
-  const {
+  const {-
     email,
     password,
     password2,
