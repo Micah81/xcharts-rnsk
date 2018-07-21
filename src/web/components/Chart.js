@@ -7,6 +7,7 @@ import { VictoryCandlestick } from 'victory';
 var api = require('../../utils/api');
 var vars = require('../../utils/robinhood/credentials')
 import Loading from './Loading';
+//import Member from '../../containers/Member';
 
 function TopStock(credentials) {
   var promise;
@@ -42,8 +43,10 @@ function ChartRender (props) {
 
 class Chart extends React.Component {
 
+
+
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       selectedInstrument: null,
       chartData: null
@@ -65,6 +68,7 @@ class Chart extends React.Component {
          return(api.fetchChartData(result))
        }).then((result)=>{ // result is the data
          this.setState({chartData:result})
+         console.log(store.getState())
        })
      }
 
