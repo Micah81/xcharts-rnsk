@@ -45,7 +45,7 @@ class Chart extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      selectedInstrument: null,
+      selectedInstrument: 'AMZN',
       chartData: null
     };
 

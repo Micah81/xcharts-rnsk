@@ -1,8 +1,8 @@
 var axios = require('axios');
 var key = require('./apiKey')
 
-var latestQuotes = [];
-function getOpenPrice (period) {
+
+function getOpenPrice (period, latestQuotes) {
   latestQuotes.push({
                      'open':   parseFloat(period['1. open']),
                      'high':   parseFloat(period['2. high']),
@@ -15,6 +15,7 @@ function getOpenPrice (period) {
 
 module.exports = {
   fetchChartData: function (instrument) {
+    var latestQuotes = [];
     var encodedURI = window.encodeURI('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + instrument + '&apikey=' + key);
     return(axios.get(encodedURI))
       .then(function (response){
@@ -22,7 +23,7 @@ module.exports = {
           var hash = response.data['Time Series (Daily)']
           var keys = Object.keys(hash)
           keys.forEach((key, i)=>{
-            getOpenPrice((hash[key]))
+            getOpenPrice((hash[key]),latestQuotes)
 
           })
           //console.log(latestQuotes)
